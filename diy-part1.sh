@@ -16,3 +16,14 @@
 # Add a feed source
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+
+# Add a feed source
+sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
+# Add Serverchan
+git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
+#Add passwall
+git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
+#Add ssr-plus
+git clone https://github.com/fw876/helloworld.git package/helloworld
+#Add tencentddns
+git clone https://github.com/liuf927/tencentcloud-openwrt-plugin-ddns.git package/tencentcloud-openwrt-plugin-ddns
